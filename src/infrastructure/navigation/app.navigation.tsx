@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Image } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 
 // Define the type for the route
@@ -11,17 +12,33 @@ type RootStackParamList = {
 };
 
 const AppNavigationTab = createBottomTabNavigator<RootStackParamList>();
-const TAB_ICONS: Record<string, string> = {
-  HomeTab: "",
-  MyListsTab: "",
-  BrowseTab: "",
-  SimulcastsTab: "",
-  AccountTab: "",
+const TAB_ICONS: Record<string, any> = {
+  HomeTab: { active: "", inactive: "" },
+  MyListsTab: { active: "", inactive: "" },
+  BrowseTab: { active: "", inactive: "" },
+  SimulcastsTab: { active: "", inactive: "" },
+  AccountTab: { active: "", inactive: "" },
 };
 
 const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
-  const ICON_NAME = TAB_ICONS[route.name];
-  return {};
+  const ICON_SOURCE = TAB_ICONS[route.name];
+  return {
+    tabBarIcon: ({
+      focused,
+      color,
+      size,
+    }: {
+      focused: boolean;
+      color: string;
+      size: number;
+    }) => (
+      <Image
+        source={focused ? ICON_SOURCE.active : ICON_SOURCE.inactive}
+        style={{ width: size, height: size }}
+        resizeMode="contain"
+      />
+    ),
+  };
 };
 
 const AppNavigation = () => {
