@@ -1,5 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Image } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { colors } from "@/src/infrastructure/theme/colors";
+import { Image, Text, View } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 
 // Define the type for the route
@@ -13,31 +16,52 @@ type RootStackParamList = {
 
 const AppNavigationTab = createBottomTabNavigator<RootStackParamList>();
 const TAB_ICONS: Record<string, any> = {
-  HomeTab: { active: "", inactive: "" },
-  MyListsTab: { active: "", inactive: "" },
-  BrowseTab: { active: "", inactive: "" },
-  SimulcastsTab: { active: "", inactive: "" },
-  AccountTab: { active: "", inactive: "" },
+  HomeTab: { type: "Ionicons", name: "home-outline" },
+  MyListsTab: { type: "Ionicons", name: "bookmark-outline" },
+  BrowseTab: { type: "Ionicons", name: "grid-outline" },
+  SimulcastsTab: {
+    type: "MaterialIcons",
+    name: "category",
+  },
+  AccountTab: {
+    type: "Asset",
+    name: "account",
+    asset: require("@/assets/tab-icons/account.png"),
+  },
 };
 
 const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
   const ICON_SOURCE = TAB_ICONS[route.name];
   return {
+    tabBarActiveTintColor: "#F47521",
+    tabBarInactiveTintColor: "#FFFFFF",
+    headerStyle: { backgroundColor: colors.ui.primary },
+    headerTintColor: colors.text.primary,
+    tabBarStyle: { backgroundColor: colors.ui.secondary },
     tabBarIcon: ({
-      focused,
       color,
       size,
     }: {
       focused: boolean;
       color: string;
       size: number;
-    }) => (
-      <Image
-        source={focused ? ICON_SOURCE.active : ICON_SOURCE.inactive}
-        style={{ width: size, height: size }}
-        resizeMode="contain"
-      />
-    ),
+    }) => {
+      const { type, name: iconName, asset } = ICON_SOURCE;
+      switch (type) {
+        case "Ionicons":
+          return <Ionicons name={iconName} size={size} color={color} />;
+        case "MaterialIcons":
+          return <MaterialIcons name={iconName} size={size} color={color} />;
+        case "Asset":
+          return (
+            <Image
+              source={asset}
+              style={{ width: size, height: size }}
+              resizeMode="contain"
+            />
+          );
+      }
+    },
   };
 };
 
@@ -47,27 +71,47 @@ const AppNavigation = () => {
       <AppNavigationTab.Screen
         name="HomeTab"
         options={{ tabBarLabel: "Home" }}
-        component={() => null}
+        component={() => (
+          <View>
+            <Text>Home</Text>
+          </View>
+        )}
       />
       <AppNavigationTab.Screen
         name="MyListsTab"
         options={{ tabBarLabel: "My Lists" }}
-        component={() => null}
+        component={() => (
+          <View>
+            <Text>Home</Text>
+          </View>
+        )}
       />
       <AppNavigationTab.Screen
         name="BrowseTab"
         options={{ tabBarLabel: "Browse" }}
-        component={() => null}
+        component={() => (
+          <View>
+            <Text>Home</Text>
+          </View>
+        )}
       />
       <AppNavigationTab.Screen
         name="SimulcastsTab"
         options={{ tabBarLabel: "Simulcasts" }}
-        component={() => null}
+        component={() => (
+          <View>
+            <Text>Home</Text>
+          </View>
+        )}
       />
       <AppNavigationTab.Screen
         name="AccountTab"
         options={{ tabBarLabel: "Account" }}
-        component={() => null}
+        component={() => (
+          <View>
+            <Text>Home</Text>
+          </View>
+        )}
       />
     </AppNavigationTab.Navigator>
   );

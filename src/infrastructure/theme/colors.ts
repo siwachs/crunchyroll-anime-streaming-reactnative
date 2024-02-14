@@ -1,7 +1,7 @@
 export const colors = {
   ui: {
-    primary: "#262626",
-    secondary: "#757575",
+    primary: "#000000",
+    secondary: "#23252b",
     tertiary: "#F1F1F1",
     quaternary: "#FFFFFF",
     disabled: "#DEDEDE",
@@ -14,7 +14,7 @@ export const colors = {
     backdrop: "#23252bcc",
   },
   text: {
-    primary: "#262626",
+    primary: "#FFFFFF",
     secondary: "#757575",
     disabled: "#9C9C9C",
     inverse: "#FFFFFF",
