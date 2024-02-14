@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import { colors } from "@/src/infrastructure/theme/colors";
-import { Image, Text, View } from "react-native";
+import theme from "@/src/infrastructure/theme";
+import Header from "./components/header.component";
+import styled from "styled-components/native";
+import { Text, View } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 
 // Define the type for the route
@@ -30,14 +32,21 @@ const TAB_ICONS: Record<string, any> = {
   },
 };
 
+const AssetIcon = styled.Image`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
+
 const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
   const ICON_SOURCE = TAB_ICONS[route.name];
   return {
     tabBarActiveTintColor: "#F47521",
     tabBarInactiveTintColor: "#FFFFFF",
-    headerStyle: { backgroundColor: colors.ui.primary },
-    headerTintColor: colors.text.primary,
-    tabBarStyle: { backgroundColor: colors.ui.secondary },
+    headerStyle: { backgroundColor: theme.colors.ui.primary },
+    headerTintColor: theme.colors.text.primary,
+    tabBarStyle: {
+      backgroundColor: theme.colors.ui.secondary,
+    },
     tabBarIcon: ({
       color,
       size,
@@ -54,9 +63,10 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
           return <MaterialIcons name={iconName} size={size} color={color} />;
         case "Asset":
           return (
-            <Image
+            <AssetIcon
+              width={size}
+              height={size}
               source={asset}
-              style={{ width: size, height: size }}
               resizeMode="contain"
             />
           );
@@ -70,7 +80,10 @@ const AppNavigation = () => {
     <AppNavigationTab.Navigator screenOptions={screenOptions}>
       <AppNavigationTab.Screen
         name="HomeTab"
-        options={{ tabBarLabel: "Home" }}
+        options={{
+          tabBarLabel: "Home",
+          headerTitle: Header,
+        }}
         component={() => (
           <View>
             <Text>Home</Text>
@@ -79,7 +92,7 @@ const AppNavigation = () => {
       />
       <AppNavigationTab.Screen
         name="MyListsTab"
-        options={{ tabBarLabel: "My Lists" }}
+        options={{ tabBarLabel: "My Lists", headerTitle: "My Lists" }}
         component={() => (
           <View>
             <Text>Home</Text>
@@ -88,7 +101,7 @@ const AppNavigation = () => {
       />
       <AppNavigationTab.Screen
         name="BrowseTab"
-        options={{ tabBarLabel: "Browse" }}
+        options={{ tabBarLabel: "Browse", headerTitle: "Browse" }}
         component={() => (
           <View>
             <Text>Home</Text>
@@ -97,7 +110,7 @@ const AppNavigation = () => {
       />
       <AppNavigationTab.Screen
         name="SimulcastsTab"
-        options={{ tabBarLabel: "Simulcasts" }}
+        options={{ tabBarLabel: "Simulcasts", headerTitle: "Simulcast Season" }}
         component={() => (
           <View>
             <Text>Home</Text>
@@ -106,7 +119,7 @@ const AppNavigation = () => {
       />
       <AppNavigationTab.Screen
         name="AccountTab"
-        options={{ tabBarLabel: "Account" }}
+        options={{ tabBarLabel: "Account", headerTitle: "My Account" }}
         component={() => (
           <View>
             <Text>Home</Text>

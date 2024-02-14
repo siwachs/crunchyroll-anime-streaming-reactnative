@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const SafeArea = () => {
+const Header = () => {
   return (
     <View>
-      <Text>SafeArea</Text>
+      <Text style={{ color: "white" }}>Header</Text>
     </View>
   );
 };
 
-export default SafeArea;
+export default Header;
