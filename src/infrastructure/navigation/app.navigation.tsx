@@ -1,11 +1,12 @@
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-import theme from "@/src/infrastructure/theme";
-import Header from "./components/header.component";
-import styled from "styled-components/native";
-import { Text, View } from "react-native";
 import { RouteProp } from "@react-navigation/native";
+import { Text, View } from "react-native";
+import styled from "styled-components/native";
+
+import Header from "./components/header.component";
+
+import theme from "@/src/infrastructure/theme";
 
 // Define the type for the route
 type RootStackParamList = {
