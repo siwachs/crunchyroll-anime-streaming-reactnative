@@ -1,11 +1,15 @@
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
-import { Text, View } from "react-native";
-import styled from "styled-components/native";
 
 import Header from "./components/header.component";
 
+import IconLogo from "@/src/components/utility/icon-logo.component";
+import MyAccount from "@/src/features/account/screens/my-account.screen";
+import BrowseScreen from "@/src/features/browse/screens/browse.screen";
+import HomeScreen from "@/src/features/home/screens/home.screen";
+import MyLists from "@/src/features/my-lists/screens/my-lists.screen";
+import Simulcasts from "@/src/features/simulcasts/screens/simulcasts.screen";
 import theme from "@/src/infrastructure/theme";
 
 // Define the type for the route
@@ -33,11 +37,6 @@ const TAB_ICONS: Record<string, any> = {
   },
 };
 
-const AssetIcon = styled.Image`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-`;
-
 const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
   const ICON_SOURCE = TAB_ICONS[route.name];
   return {
@@ -64,9 +63,9 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
           return <MaterialIcons name={iconName} size={size} color={color} />;
         case "Asset":
           return (
-            <AssetIcon
-              width={size}
-              height={size}
+            <IconLogo
+              imageWidth={`${size}px`}
+              imageHeight={`${size}px`}
               source={asset}
               resizeMode="contain"
             />
@@ -85,47 +84,27 @@ const AppNavigation = () => {
           tabBarLabel: "Home",
           headerTitle: Header,
         }}
-        component={() => (
-          <View>
-            <Text>Home</Text>
-          </View>
-        )}
+        component={HomeScreen}
       />
       <AppNavigationTab.Screen
         name="MyListsTab"
         options={{ tabBarLabel: "My Lists", headerTitle: "My Lists" }}
-        component={() => (
-          <View>
-            <Text>Home</Text>
-          </View>
-        )}
+        component={MyLists}
       />
       <AppNavigationTab.Screen
         name="BrowseTab"
         options={{ tabBarLabel: "Browse", headerTitle: "Browse" }}
-        component={() => (
-          <View>
-            <Text>Home</Text>
-          </View>
-        )}
+        component={BrowseScreen}
       />
       <AppNavigationTab.Screen
         name="SimulcastsTab"
         options={{ tabBarLabel: "Simulcasts", headerTitle: "Simulcast Season" }}
-        component={() => (
-          <View>
-            <Text>Home</Text>
-          </View>
-        )}
+        component={Simulcasts}
       />
       <AppNavigationTab.Screen
         name="AccountTab"
         options={{ tabBarLabel: "Account", headerTitle: "My Account" }}
-        component={() => (
-          <View>
-            <Text>Home</Text>
-          </View>
-        )}
+        component={MyAccount}
       />
     </AppNavigationTab.Navigator>
   );
