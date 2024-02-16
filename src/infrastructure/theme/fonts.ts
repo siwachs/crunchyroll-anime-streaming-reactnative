@@ -1,7 +1,5 @@
 export const fonts = {
-  body: "Lato",
-  heading: "Lato",
-  monospace: "Lato",
+  lato: "Lato",
 } as const;
 
 export const fontWeights = {

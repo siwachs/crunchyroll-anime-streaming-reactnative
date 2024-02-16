@@ -1,11 +1,13 @@
-import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
+
+import ScreenContainer from "@/src/components/Utilities/screen-container.component";
+import Banner from "@/src/features/home/components/banner.component";
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <ScreenContainer>
+      <Banner />
+    </ScreenContainer>
   );
 };
 

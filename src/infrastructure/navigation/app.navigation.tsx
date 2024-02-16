@@ -2,9 +2,9 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
 
-import Header from "./components/header.component";
+import HomeHeader from "../../components/headers/home-header.component";
 
-import IconLogo from "@/src/components/utility/icon-logo.component";
+import IconLogo from "@/src/components/Utilities/icon-logo.component";
 import MyAccount from "@/src/features/account/screens/my-account.screen";
 import BrowseScreen from "@/src/features/browse/screens/browse.screen";
 import HomeScreen from "@/src/features/home/screens/home.screen";
@@ -42,10 +42,10 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
   return {
     tabBarActiveTintColor: "#F47521",
     tabBarInactiveTintColor: "#FFFFFF",
-    headerStyle: { backgroundColor: theme.colors.ui.primary },
+    headerStyle: { backgroundColor: theme.colors.bg.primary },
     headerTintColor: theme.colors.text.primary,
     tabBarStyle: {
-      backgroundColor: theme.colors.ui.secondary,
+      backgroundColor: theme.colors.bg.secondary,
     },
     tabBarIcon: ({
       color,
@@ -82,7 +82,7 @@ const AppNavigation = () => {
         name="HomeTab"
         options={{
           tabBarLabel: "Home",
-          headerTitle: Header,
+          headerTitle: HomeHeader,
         }}
         component={HomeScreen}
       />

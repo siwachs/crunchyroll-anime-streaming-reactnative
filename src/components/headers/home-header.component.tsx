@@ -1,7 +1,7 @@
 import { Feather } from "@expo/vector-icons";
 import styled from "styled-components/native";
 
-import IconLogo from "@/src/components/utility/icon-logo.component";
+import IconLogo from "@/src/components/Utilities/icon-logo.component";
 import theme from "@/src/infrastructure/theme";
 
 const HeaderContainer = styled.View`
@@ -17,7 +17,7 @@ const HeaderRight = styled.View`
   column-gap: ${(props) => props.theme.space[4]};
 `;
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <HeaderContainer>
       <IconLogo
@@ -40,4 +40,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeHeader;
