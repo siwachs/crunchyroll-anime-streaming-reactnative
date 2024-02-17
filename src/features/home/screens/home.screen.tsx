@@ -1,5 +1,3 @@
-import { Text } from "react-native";
-
 import ScreenContainer from "@/src/components/Utilities/screen-container.component";
 import Banner from "@/src/features/home/components/banner.component";
 
