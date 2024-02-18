@@ -1,5 +1,7 @@
 export const fonts = {
   lato: "Lato_400Regular",
+  lato700: "Lato_700Bold",
+  lato900: "Lato_900Black",
 } as const;
 
 export const fontWeights = {
@@ -10,8 +12,8 @@ export const fontWeights = {
 } as const;
 
 export const fontSizes = {
-  caption: "12px",
-  button: "14px",
+  extraSmall: "12px",
+  small: "14px",
   body: "16px",
   normal: "18px",
   title: "20px",

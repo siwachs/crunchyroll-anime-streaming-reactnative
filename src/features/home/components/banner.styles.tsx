@@ -1,9 +1,10 @@
+import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 
 const BannerContainer = styled.View`
   max-width: 100%;
   width: 100%;
-  height: 436px;
+  height: 85%;
   overflow: hidden;
 `;
 
@@ -19,16 +20,26 @@ const BannerImage = styled.ImageBackground.attrs({
   z-index: -1;
 `;
 
+const OverLay = styled(LinearGradient)`
+  aspect-ratio: 2/3;
+  left: 0;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+`;
+
 const BannerTextContainer = styled.View`
   padding: ${({ theme }) => theme.space[4]};
-  position: relative;
+  position: absolute;
   z-index: 1;
   row-gap: 14px;
-  top: 220px;
+  top: 290px;
 `;
 
 const Title = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.lato};
+  font-family: ${({ theme }) => theme.fonts.lato700};
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fontSizes.h5};
   font-weight: ${({ theme }) => theme.fontWeights.semiBold};
@@ -48,31 +59,14 @@ const Description = styled.Text`
   color: ${({ theme }) => theme.colors.text.primary};
 `;
 
-const WatchNowButtonContainer = styled.View`
-  flex-direction: row;
-  column-gap: ${({ theme }) => theme.space[2]};
-  padding: ${({ theme }) => theme.space[2]};
-  max-width: ${({ theme }) => theme.sizes[5]};
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.bg.buttonBackground};
-`;
-
-const WatchNowButtonText = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.lato};
-  text-transform: uppercase;
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-`;
-
 export {
   BannerContainer,
   BannerImage,
+  OverLay,
   BannerTextContainer,
   Title,
   SubTitle,
   Description,
-  WatchNowButtonContainer,
-  WatchNowButtonText,
 };
 
 // background: linear-gradient(180deg, #0000, #0003 20%, #0009 56%, #000);
