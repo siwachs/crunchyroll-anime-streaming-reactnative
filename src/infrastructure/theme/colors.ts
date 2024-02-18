@@ -12,10 +12,11 @@ export const colors = {
     primary: "#000000",
     secondary: "#23252b",
     backdrop: "#23252bcc",
+    buttonBackground: "#f47521",
   },
   text: {
     primary: "#FFFFFF",
-    secondary: "#757575",
+    secondary: "#dadada",
     disabled: "#9C9C9C",
     inverse: "#FFFFFF",
     error: "#D0421B",
