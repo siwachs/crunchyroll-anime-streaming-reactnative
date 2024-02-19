@@ -1,10 +1,10 @@
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
+import { Image } from "react-native";
 
 import HomeHeader from "../../components/headers/home-header.component";
 
-import IconLogo from "@/src/components/Utilities/icon-logo.component";
 import MyAccount from "@/src/features/account/screens/my-account.screen";
 import BrowseScreen from "@/src/features/browse/screens/browse.screen";
 import HomeScreen from "@/src/features/home/screens/home.screen";
@@ -63,9 +63,8 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
           return <MaterialIcons name={iconName} size={size} color={color} />;
         case "Asset":
           return (
-            <IconLogo
-              imageWidth={`${size}px`}
-              imageHeight={`${size}px`}
+            <Image
+              className={`h-${size} w-${size}`}
               source={asset}
               resizeMode="contain"
             />

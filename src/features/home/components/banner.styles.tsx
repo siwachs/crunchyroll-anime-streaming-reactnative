@@ -1,42 +1,4 @@
 import { LinearGradient } from "expo-linear-gradient";
-import styled from "styled-components/native";
-
-const BannerContainer = styled.View`
-  max-width: 100%;
-  width: 100%;
-  height: 85%;
-  overflow: hidden;
-`;
-
-const BannerImage = styled.ImageBackground.attrs({
-  source: require("@/mock-data/banner/2.jpg"),
-})`
-  aspect-ratio: 2/3;
-  left: 0;
-  min-width: 100%;
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-`;
-
-const OverLay = styled(LinearGradient)`
-  aspect-ratio: 2/3;
-  left: 0;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
-`;
-
-const BannerTextContainer = styled.View`
-  padding: ${({ theme }) => theme.space[4]};
-  position: absolute;
-  z-index: 1;
-  row-gap: 14px;
-  top: 290px;
-`;
 
 const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.lato700};

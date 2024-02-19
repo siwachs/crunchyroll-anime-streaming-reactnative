@@ -1,11 +1,11 @@
-import ScreenContainer from "@/src/components/Utilities/screen-container.component";
+import { View } from "react-native";
 import Banner from "@/src/features/home/components/banner.component";
 
 const HomeScreen = () => {
   return (
-    <ScreenContainer>
+    <View className="flex-1 bg-primary">
       <Banner />
-    </ScreenContainer>
+    </View>
   );
 };
 

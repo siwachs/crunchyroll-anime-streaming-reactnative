@@ -1,10 +1,16 @@
+import { ReactNode } from "react";
 import { SafeAreaView, StatusBar } from "react-native";
-import styled from "styled-components/native";
 
-const SafeArea = styled(SafeAreaView)`
-  flex: 1;
-  margin-top: ${StatusBar.currentHeight ? StatusBar.currentHeight : 0}px;
-  background-color: ${(props) => props.theme.colors.ui.primary};
-`;
+const SafeArea = ({ children }: { children: ReactNode }) => {
+  const marginTop = StatusBar.currentHeight
+    ? `mt-[${StatusBar.currentHeight}px]`
+    : "mt-0";
+
+  return (
+    <SafeAreaView className={`flex-1 ${marginTop} bg-primary`}>
+      {children}
+    </SafeAreaView>
+  );
+};
 
 export default SafeArea;

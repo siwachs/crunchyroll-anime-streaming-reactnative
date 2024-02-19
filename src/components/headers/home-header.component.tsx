@@ -1,42 +1,26 @@
 import { Feather } from "@expo/vector-icons";
-import styled from "styled-components/native";
+import { Image, View } from "react-native";
 
-import IconLogo from "@/src/components/Utilities/icon-logo.component";
 import theme from "@/src/infrastructure/theme";
-
-const HeaderContainer = styled.View`
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const HeaderRight = styled.View`
-  flex-direction: row;
-  align-items: center;
-  column-gap: ${(props) => props.theme.space[4]};
-`;
 
 const HomeHeader = () => {
   return (
-    <HeaderContainer>
-      <IconLogo
-        imageWidth="136px"
-        imageHeight="24px"
+    <View className="w-full items-center justify-between">
+      <Image
+        className="w-[136px] h-6"
         source={require("@/assets/logos/logo.png")}
         resizeMode="contain"
       />
-      <HeaderRight>
+      <View className="flex-row items-center">
         <Feather name="cast" size={24} color={theme.colors.text.primary} />
-        <IconLogo
-          imageWidth="24px"
-          imageHeight="24px"
+        <Image
+          className="h-6 w-6 gap-x-[18px]"
           source={require("@/assets/icons/search.png")}
           resizeMode="contain"
           tintColor={theme.colors.text.primary}
         />
-      </HeaderRight>
-    </HeaderContainer>
+      </View>
+    </View>
   );
 };
 
