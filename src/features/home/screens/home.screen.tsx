@@ -1,11 +1,14 @@
-import { View } from "react-native";
-import Banner from "@/src/features/home/components/banner.component";
+import { View, Text } from "react-native";
+
+import HomeBackground from "@/src/features/home/components/home-background.component";
 
 const HomeScreen = () => {
   return (
-    <View className="flex-1 bg-primary">
-      <Banner />
-    </View>
+    <HomeBackground>
+      <View>
+        <Text>Solo Levelling</Text>
+      </View>
+    </HomeBackground>
   );
 };
 

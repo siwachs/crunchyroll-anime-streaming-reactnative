@@ -7,6 +7,23 @@ module.exports = {
         primary: "#000000",
         secondary: "#23252b",
       },
+      fontFamily: {
+        lato: ["Lato_400Regular", "Roboto", "Helvetica", "Arial", "sans-serif"],
+        latoBold: [
+          "Lato_700Bold",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+        latoExtrabold: [
+          "Lato_900Black",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+      },
     },
   },
   plugins: [],

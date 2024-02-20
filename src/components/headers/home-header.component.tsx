@@ -5,16 +5,16 @@ import theme from "@/src/infrastructure/theme";
 
 const HomeHeader = () => {
   return (
-    <View className="w-full items-center justify-between">
+    <View className="w-full flex-row items-center justify-between">
       <Image
-        className="w-[136px] h-6"
+        className="h-6 w-[136px]"
         source={require("@/assets/logos/logo.png")}
         resizeMode="contain"
       />
-      <View className="flex-row items-center">
+      <View className="flex-row items-center gap-x-[18px]">
         <Feather name="cast" size={24} color={theme.colors.text.primary} />
         <Image
-          className="h-6 w-6 gap-x-[18px]"
+          className="h-6 w-6"
           source={require("@/assets/icons/search.png")}
           resizeMode="contain"
           tintColor={theme.colors.text.primary}

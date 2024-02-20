@@ -64,7 +64,7 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
         case "Asset":
           return (
             <Image
-              className={`h-${size} w-${size}`}
+              style={{ height: size, width: size }}
               source={asset}
               resizeMode="contain"
             />
