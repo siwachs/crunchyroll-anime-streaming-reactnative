@@ -10,7 +10,12 @@ const HomeBackground = ({ children }: { children?: ReactNode }) => {
     >
       <LinearGradient
         className="absolute left-0 top-0 z-0 h-full w-full min-w-full"
-        colors={["rgba(20, 21, 25, 0)", "rgba(20, 21, 25, 0.8)"]}
+        colors={[
+          "rgba(0, 0, 0, 0)",
+          "rgba(0, 0, 0, 0.2)",
+          "rgba(0, 0, 0, 0.6)",
+          "rgba(0, 0, 0, 1)",
+        ]}
         start={[0, 0]}
         end={[0, 1]}
       />
