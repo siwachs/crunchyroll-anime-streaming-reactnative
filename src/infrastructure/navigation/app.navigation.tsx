@@ -46,6 +46,10 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
     headerTintColor: theme.colors.text.primary,
     tabBarStyle: {
       backgroundColor: theme.colors.bg.secondary,
+      minHeight: 60,
+      paddingTop: 10,
+      paddingBottom: 10,
+      borderTopWidth: 0,
     },
     tabBarIcon: ({
       color,

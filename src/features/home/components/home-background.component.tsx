@@ -2,7 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { ReactNode } from "react";
 import { ImageBackground } from "react-native";
 
-const HomeBackground = ({ children }: { children: ReactNode }) => {
+const HomeBackground = ({ children }: { children?: ReactNode }) => {
   return (
     <ImageBackground
       source={require("@/mock-data/banner/2.jpg")}
