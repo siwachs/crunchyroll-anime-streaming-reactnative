@@ -1,4 +1,4 @@
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import HomeBannerInfo from "../components/home-banner-info.component";
 
@@ -6,11 +6,13 @@ import HomeBackground from "@/src/features/home/components/home-background.compo
 
 const HomeScreen = () => {
   return (
-    <HomeBackground>
-      <ScrollView className="flex-1 pl-4">
-        <HomeBannerInfo />
-      </ScrollView>
-    </HomeBackground>
+    <View className="flex-1 bg-primary">
+      <HomeBackground>
+        <ScrollView className="flex-1 overflow-visible pl-4">
+          <HomeBannerInfo />
+        </ScrollView>
+      </HomeBackground>
+    </View>
   );
 };
 
