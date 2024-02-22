@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         primary: "#000000",
         secondary: "#23252b",
+        crunchyrollOrange: "#f47521",
       },
       fontFamily: {
         lato: ["Lato_400Regular", "Roboto", "Helvetica", "Arial", "sans-serif"],

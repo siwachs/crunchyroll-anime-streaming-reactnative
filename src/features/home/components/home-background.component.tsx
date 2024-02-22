@@ -7,6 +7,7 @@ const HomeBackground = ({ children }: { children?: ReactNode }) => {
     <ImageBackground
       source={require("@/mock-data/banner/2.jpg")}
       className="flex-1 bg-primary"
+      resizeMode="cover"
     >
       <LinearGradient
         className="absolute left-0 top-0 z-0 h-full w-full min-w-full"
