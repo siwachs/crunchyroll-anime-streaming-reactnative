@@ -1,10 +1,13 @@
 import { LinearGradient as ExpoLinearGradient } from "expo-linear-gradient";
-import { ReactNode } from "react";
 
-const LinearGradient = ({ children }: { children?: ReactNode }) => {
+const LinearGradient = ({
+  tailwindClassName,
+}: {
+  tailwindClassName?: string;
+}) => {
   return (
     <ExpoLinearGradient
-      className="absolute left-0 top-0 z-0 h-full w-full min-w-full"
+      className={tailwindClassName}
       colors={[
         "rgba(0, 0, 0, 0)",
         "rgba(0, 0, 0, 0.2)",
@@ -13,9 +16,7 @@ const LinearGradient = ({ children }: { children?: ReactNode }) => {
       ]}
       start={[0, 0]}
       end={[0, 1]}
-    >
-      {children}
-    </ExpoLinearGradient>
+    />
   );
 };
 

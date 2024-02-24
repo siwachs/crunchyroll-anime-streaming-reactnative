@@ -42,7 +42,9 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
   return {
     tabBarActiveTintColor: "#F47521",
     tabBarInactiveTintColor: "#FFFFFF",
-    headerStyle: { backgroundColor: theme.colors.bg.primary },
+    headerStyle: {
+      backgroundColor: theme.colors.bg.primary,
+    },
     headerTintColor: theme.colors.text.primary,
     tabBarStyle: {
       backgroundColor: theme.colors.bg.secondary,
