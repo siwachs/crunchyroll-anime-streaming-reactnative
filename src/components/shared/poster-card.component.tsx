@@ -1,6 +1,7 @@
 import React from "react";
-import { AnimePoster } from "@/types";
 import { View, Text, Image } from "react-native";
+
+import { AnimePoster } from "@/types";
 
 const PosterCard = ({
   poster,

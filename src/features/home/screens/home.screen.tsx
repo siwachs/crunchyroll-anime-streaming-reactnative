@@ -1,4 +1,4 @@
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import ContentRow from "../components/content-row.component";
 import HomeBannerInfo from "../components/home-banner-info.component";
@@ -10,6 +10,9 @@ const HomeScreen = () => {
   return (
     <View className="relative flex-1 bg-primary">
       <HomeBackground />
+      <ScrollView className="flex-1">
+        <HomeBannerInfo />
+      </ScrollView>
     </View>
   );
 };

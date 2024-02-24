@@ -1,6 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
-import { AnimePoster } from "@/types";
+
 import PosterCard from "@/src/components/shared/poster-card.component";
+import { AnimePoster } from "@/types";
 
 const ContentRow = ({
   title,

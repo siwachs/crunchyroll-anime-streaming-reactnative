@@ -12,12 +12,17 @@ const HomeBannerInfo = () => {
     Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity;
 
   return (
-    <View className="gap-y-2 pt-[75%]">
-      <Text className="text-[22px] font-semibold uppercase text-white">
+    <View className="h-[56vh] justify-end gap-y-2 pl-4">
+      <Text className="font-latoBold text-2xl uppercase text-white">
         SPY X Family
       </Text>
-      <Text className="text-xs capitalize text-gray-300">Dub | Sub</Text>
-      <Text numberOfLines={3} className="tex-sm leading-5 text-white">
+      <Text className="font-lato text-sm capitalize text-gray-300">
+        Dub | Sub
+      </Text>
+      <Text
+        numberOfLines={3}
+        className="font-lato text-sm leading-5 text-white"
+      >
         World peace is at stake and secret agent Twilight must undergo his most
         difficult mission yet—pretend to be a family man. Posing as a loving
         husband and father, he’ll infiltrate an elite school to get close to a
@@ -26,7 +31,7 @@ const HomeBannerInfo = () => {
         does, his adopted daughter who’s a telepath!
       </Text>
       <Touchable onPress={() => {}}>
-        <View className="mt-4 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange py-2">
+        <View className="mt-4 h-10 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange">
           <Feather name="play" size={25} color="black" />
           <Text className="text-base font-semibold uppercase">Watch Now</Text>
         </View>

@@ -1,5 +1,6 @@
+import { View, Image } from "react-native";
+
 import LinearGradient from "@/src/components/Utilities/linear-gradient.component";
-import { View, Image, Text } from "react-native";
 
 const HomeBackground = () => {
   return (
