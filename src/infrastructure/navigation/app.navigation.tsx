@@ -73,8 +73,6 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
 };
 
 const AppNavigation = () => {
-  const [headerTransparent, setHeaderTransparent] = useState(true);
-
   return (
     <AppNavigationTab.Navigator screenOptions={screenOptions}>
       <AppNavigationTab.Screen
@@ -82,7 +80,7 @@ const AppNavigation = () => {
         options={{
           tabBarLabel: "Home",
           headerTitle: HomeHeader,
-          headerTransparent,
+          headerTransparent: true,
         }}
         component={HomeScreen}
       />

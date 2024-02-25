@@ -9,8 +9,9 @@ import HomeHeader from "@/src/components/headers/home-header.component";
 
 const HomeScreen = () => {
   return (
-    <View className="relative flex-1 bg-primary">
+    <View className="flex-1 bg-primary">
       <HomeBackground />
+      <HomeBannerInfo />
     </View>
   );
 };
