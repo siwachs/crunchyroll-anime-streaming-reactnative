@@ -1,9 +1,8 @@
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
 import { Image } from "react-native";
-
-import HomeHeader from "../../components/headers/home-header.component";
 
 import MyAccount from "@/src/features/account/screens/my-account.screen";
 import BrowseScreen from "@/src/features/browse/screens/browse.screen";
@@ -11,6 +10,7 @@ import HomeScreen from "@/src/features/home/screens/home.screen";
 import MyLists from "@/src/features/my-lists/screens/my-lists.screen";
 import Simulcasts from "@/src/features/simulcasts/screens/simulcasts.screen";
 import theme from "@/src/infrastructure/theme";
+import HomeHeader from "@/src/components/headers/home-header.component";
 
 // Define the type for the route
 type RootStackParamList = {
@@ -45,22 +45,14 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
     headerStyle: {
       backgroundColor: theme.colors.bg.primary,
     },
-    headerTintColor: theme.colors.text.primary,
     tabBarStyle: {
       backgroundColor: theme.colors.bg.secondary,
-      minHeight: 60,
+      height: 60,
       paddingTop: 10,
       paddingBottom: 10,
       borderTopWidth: 0,
     },
-    tabBarIcon: ({
-      color,
-      size,
-    }: {
-      focused: boolean;
-      color: string;
-      size: number;
-    }) => {
+    tabBarIcon: ({ color, size }: { color: string; size: number }) => {
       const { type, name: iconName, asset } = ICON_SOURCE;
       switch (type) {
         case "Ionicons":
@@ -81,6 +73,8 @@ const screenOptions = ({ route }: { route: RouteProp<RootStackParamList> }) => {
 };
 
 const AppNavigation = () => {
+  const [headerTransparent, setHeaderTransparent] = useState(true);
+
   return (
     <AppNavigationTab.Navigator screenOptions={screenOptions}>
       <AppNavigationTab.Screen
@@ -88,6 +82,7 @@ const AppNavigation = () => {
         options={{
           tabBarLabel: "Home",
           headerTitle: HomeHeader,
+          headerTransparent,
         }}
         component={HomeScreen}
       />
