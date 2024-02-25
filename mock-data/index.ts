@@ -15,8 +15,7 @@ export const data: any = [
   },
   {
     id: 3,
-    image:
-      "https://i5.walmartimages.com/asr/897d6f39-65e2-4118-b89d-d9f9b39ecdec_1.97ccedd2aab873cc19a9d0d7daeaed2d.jpeg",
+    image: "https://www.enjpg.com/img/2020/mha-4-e1622234732424.jpg",
     title: "My Hero Academia",
     subTitle: "Dub | Sub",
   },
@@ -48,7 +47,8 @@ export const data: any = [
   },
   {
     id: 8,
-    image: "https://wallpapercave.com/wp/wp9122309.jpg",
+    image:
+      "https://image.tmdb.org/t/p/original/xZ0aVDEgfSmLzAnjjpAAoNCfV3F.jpg",
     title: "Death Note",
     subTitle: "Dub | Sub",
   },
@@ -87,7 +87,7 @@ export const data: any = [
   {
     id: 14,
     image:
-      "https://ih1.redbubble.net/image.1956842888.4392/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "https://image.tmdb.org/t/p/original/aRwmcX36r1ZpR5Xq5mmFcpUDQ8J.jpg",
     title: "Re:Zero − Starting Life in Another World",
     subTitle: "Subtitled",
   },

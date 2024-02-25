@@ -6,20 +6,26 @@ import { AnimePoster } from "@/types";
 const ContentRow = ({
   title,
   data,
-  tailwindClassName,
 }: {
   title: string;
   data: AnimePoster[];
-  tailwindClassName?: string;
 }) => {
   return (
-    <View className={tailwindClassName}>
-      <Text className="font-lato text-lg font-semibold uppercase text-white">
+    <View>
+      <Text className="mt-4 pb-1 pl-3 font-lato text-lg font-semibold uppercase text-white">
         {title}
       </Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {data.map((item) => (
-          <PosterCard poster={item} tailwindClassName="mr-2" key={item.id} />
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 12 }}
+      >
+        {data.map((item, index) => (
+          <PosterCard
+            poster={item}
+            key={item.id}
+            posterCardGapClassName={data.length - 1 !== index ? "mr-2" : ""}
+          />
         ))}
       </ScrollView>
     </View>

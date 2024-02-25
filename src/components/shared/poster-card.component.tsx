@@ -5,13 +5,13 @@ import { AnimePoster } from "@/types";
 
 const PosterCard = ({
   poster,
-  tailwindClassName,
+  posterCardGapClassName,
 }: {
   poster: AnimePoster;
-  tailwindClassName?: string;
+  posterCardGapClassName?: string;
 }) => {
   return (
-    <View className={`w-36 items-start ${tailwindClassName}`}>
+    <View className={`w-36 ${posterCardGapClassName}`}>
       <Image className="h-48 w-full" source={{ uri: poster.image }} />
       <Text className="text-white">{poster.title}</Text>
       <Text className="text-white">{poster.subTitle}</Text>

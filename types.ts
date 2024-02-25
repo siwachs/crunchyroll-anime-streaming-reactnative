@@ -1,5 +1,5 @@
 export interface AnimePoster {
-  id: number | string;
+  id: string;
   image: string;
   title: string;
   subTitle: string;

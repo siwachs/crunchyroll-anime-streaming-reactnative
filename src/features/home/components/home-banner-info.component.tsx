@@ -12,11 +12,11 @@ const HomeBannerInfo = () => {
     Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity;
 
   return (
-    <View className="h-[56vh] justify-end gap-y-2 pl-4">
+    <View className="h-[56vh] justify-end gap-y-2 px-4">
       <Text className="font-latoBold text-2xl uppercase text-white">
         SPY X Family
       </Text>
-      <Text className="font-lato text-sm capitalize text-gray-300">
+      <Text className="font-lato text-sm capitalize text-slate-200">
         Dub | Sub
       </Text>
       <Text
