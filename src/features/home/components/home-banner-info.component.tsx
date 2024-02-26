@@ -31,7 +31,7 @@ const HomeBannerInfo = () => {
         does, his adopted daughter who’s a telepath!
       </Text>
       <Touchable onPress={() => {}}>
-        <View className="mt-4 h-10 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange">
+        <View className="mt-3.5 h-10 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange">
           <Feather name="play" size={25} color="black" />
           <Text className="text-base font-semibold uppercase">Watch Now</Text>
         </View>

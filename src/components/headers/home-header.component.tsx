@@ -9,6 +9,7 @@ const HomeHeader = () => {
       <Image
         className="h-[32px] w-[32px]"
         source={require("@/assets/logos/logo.png")}
+        tintColor={theme.colors.bg.crunchyrollOrange}
       />
       <View className="flex-row items-center gap-x-[22px]">
         <Feather name="cast" size={25} color={theme.colors.text.primary} />

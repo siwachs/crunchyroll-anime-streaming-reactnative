@@ -12,7 +12,7 @@ export const colors = {
     primary: "#000000",
     secondary: "#23252b",
     backdrop: "#23252bcc",
-    buttonBackground: "#f47521",
+    crunchyrollOrange: "#f47522",
   },
   text: {
     primary: "#FFFFFF",
