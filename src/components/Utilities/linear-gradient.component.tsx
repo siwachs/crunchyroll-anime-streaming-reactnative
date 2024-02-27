@@ -9,7 +9,7 @@ const LinearGradient = ({
     <ExpoLinearGradient
       className={tailwindClassName}
       colors={[
-        "rgba(0, 0, 0, 0)", // Top
+        "rgba(0, 0, 0, 1)", // Top
         "rgba(0, 0, 0, 0.03) 20%", // Middle
         "rgba(0, 0, 0, 0.09) 56%", // Middle
         "#000", // Bottom
