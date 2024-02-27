@@ -24,7 +24,7 @@ const ContentRow = ({
           <PosterCard
             poster={item}
             key={item.id}
-            posterCardGapClassName={data.length - 1 !== index ? "mr-2" : ""}
+            containerStyle={data.length - 1 !== index ? "mr-2" : ""}
           />
         ))}
       </ScrollView>

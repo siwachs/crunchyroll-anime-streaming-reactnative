@@ -8,6 +8,7 @@ module.exports = {
         secondary: "#23252b",
         crunchyrollOrange: "#f47522",
       },
+      objectPosition: { "center-top": "center top" },
       fontFamily: {
         lato: ["Lato_400Regular", "Roboto", "Helvetica", "Arial", "sans-serif"],
         latoBold: [

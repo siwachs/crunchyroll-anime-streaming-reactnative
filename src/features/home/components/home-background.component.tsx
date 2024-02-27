@@ -4,13 +4,13 @@ import LinearGradient from "@/src/components/Utilities/linear-gradient.component
 
 const HomeBackground = () => {
   return (
-    <View className="absolute left-0 right-0 top-0 z-0 aspect-[2/3]">
+    <View className="absolute left-0 top-0 z-0 aspect-[2/3] w-full min-w-full">
       <Image
-        source={require("@/mock-data/banner/1.jpg")}
-        className="absolute z-10 h-full w-full"
+        source={require("@/mock-data/banner/1.webp")}
+        className="object-center-top relative h-full w-full"
         resizeMode="cover"
       />
-      <LinearGradient tailwindClassName="absolute z-20 h-full w-full" />
+      <LinearGradient tailwindClassName="absolute z-10 w-full h-full" />
     </View>
   );
 };
