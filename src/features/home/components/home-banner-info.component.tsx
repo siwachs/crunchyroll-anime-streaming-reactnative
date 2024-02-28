@@ -1,42 +1,45 @@
 import { Feather } from "@expo/vector-icons";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  Platform,
-} from "react-native";
+import { View, Text } from "react-native";
+
+import Touchable from "@/src/components/Utilities/touchable.component";
 
 const HomeBannerInfo = () => {
-  const Touchable: any =
-    Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity;
-
   return (
-    <View className="h-[56vh] justify-end gap-y-2 px-4">
-      <Text className="font-latoBold text-2xl uppercase text-white">
-        SPY X Family
-      </Text>
-      <Text className="font-lato text-sm capitalize text-slate-200">
-        Dub | Sub
-      </Text>
-      <Text
-        numberOfLines={3}
-        className="font-lato text-sm leading-5 text-white"
-      >
-        World peace is at stake and secret agent Twilight must undergo his most
-        difficult mission yet—pretend to be a family man. Posing as a loving
-        husband and father, he’ll infiltrate an elite school to get close to a
-        high-profile politician. He has the perfect cover, except his wife’s a
-        deadly assassin and neither knows each other’s identity. But someone
-        does, his adopted daughter who’s a telepath!
-      </Text>
-      <Touchable onPress={() => {}}>
-        <View className="mt-3.5 h-10 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange">
-          <Feather name="play" size={25} color="black" />
-          <Text className="text-base font-semibold uppercase">Watch Now</Text>
+    <Touchable>
+      <View className="h-[62vh] w-full min-w-full overflow-hidden px-4">
+        <View className="h-[54vh] justify-end">
+          <Text
+            numberOfLines={2}
+            className="font-latoBold text-2xl uppercase text-white"
+          >
+            Villainess Level 99: I May Be the Hidden Boss But I'm Not the Demon
+            Lord
+          </Text>
+          <Text className="font-lato text-sm capitalize text-slate-200">
+            Dub | Sub
+          </Text>
+          <Text
+            numberOfLines={3}
+            className="font-lato text-sm leading-[18px] text-white"
+          >
+            This college kid wants nothing more than a quiet life. So when she’s
+            reborn as Yumiella, the hidden villainess of an Otome RPG, she’s not
+            exactly thrilled. Still yearning for peace, she abandons her evil
+            duties to live a more discreet life. Until her gamer side kicks in
+            and she accidentally reaches level 99! Now, everyone suspects that
+            she’s the infamous Demon Lord. What future awaits her?
+          </Text>
+          <Touchable onPress={() => {}}>
+            <View className="h-10 w-40 flex-row items-center justify-center gap-x-1 bg-crunchyrollOrange">
+              <Feather name="play" size={25} color="black" />
+              <Text className="text-base font-semibold uppercase">
+                Watch Now
+              </Text>
+            </View>
+          </Touchable>
         </View>
-      </Touchable>
-    </View>
+      </View>
+    </Touchable>
   );
 };
 

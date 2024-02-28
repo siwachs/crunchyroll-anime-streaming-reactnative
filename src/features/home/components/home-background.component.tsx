@@ -8,7 +8,7 @@ const HomeBackground = () => {
       <View className="aspect-[2/3]">
         <Image
           source={require("@/mock-data/banner/1.webp")}
-          className="object-center-top relative h-full w-full"
+          className="relative h-full w-full object-center-top"
           resizeMode="cover"
         />
       </View>

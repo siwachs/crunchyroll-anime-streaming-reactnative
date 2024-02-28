@@ -1,16 +1,16 @@
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteProp } from "@react-navigation/native";
+import { useState } from "react";
 import { Image } from "react-native";
 
+import HomeHeader from "@/src/components/headers/home-header.component";
 import MyAccount from "@/src/features/account/screens/my-account.screen";
 import BrowseScreen from "@/src/features/browse/screens/browse.screen";
 import HomeScreen from "@/src/features/home/screens/home.screen";
 import MyLists from "@/src/features/my-lists/screens/my-lists.screen";
 import Simulcasts from "@/src/features/simulcasts/screens/simulcasts.screen";
 import theme from "@/src/infrastructure/theme";
-import HomeHeader from "@/src/components/headers/home-header.component";
 
 // Define the type for the route
 type RootStackParamList = {
