@@ -12,7 +12,7 @@ const HomeScreen = () => {
       <HomeBackground />
       <ScrollView className="flex-1">
         <HomeBannerInfo />
-        <View />
+        <ContentRow title="Top Picks For You" data={data} />
       </ScrollView>
     </View>
   );

@@ -12,7 +12,7 @@ const ContentRow = ({
 }) => {
   return (
     <View>
-      <Text className="mt-4 pb-1 pl-3 font-lato text-lg font-semibold uppercase text-white">
+      <Text className="font-lato text-lg font-semibold uppercase text-white">
         {title}
       </Text>
       <ScrollView
@@ -20,12 +20,8 @@ const ContentRow = ({
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ paddingHorizontal: 12 }}
       >
-        {data.map((item, index) => (
-          <PosterCard
-            poster={item}
-            key={item.id}
-            containerStyle={data.length - 1 !== index ? "mr-2" : ""}
-          />
+        {data.map((item) => (
+          <PosterCard poster={item} key={item.id} />
         ))}
       </ScrollView>
     </View>
