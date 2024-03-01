@@ -1,13 +1,13 @@
 import { LinearGradient as ExpoLinearGradient } from "expo-linear-gradient";
 
 const LinearGradient = ({
-  tailwindClassName,
+  containerStyle,
 }: {
-  tailwindClassName?: string;
+  containerStyle?: string;
 }) => {
   return (
     <ExpoLinearGradient
-      className={tailwindClassName}
+      className={containerStyle}
       colors={[
         "rgba(0, 0, 0, 1)",
         "rgba(0, 0, 0, 0.2) 20%",

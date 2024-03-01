@@ -12,7 +12,7 @@ const HomeBackground = () => {
           resizeMode="cover"
         />
       </View>
-      <LinearGradient tailwindClassName="absolute z-10 w-full h-full" />
+      <LinearGradient containerStyle="absolute z-10 w-full h-full" />
     </View>
   );
 };
