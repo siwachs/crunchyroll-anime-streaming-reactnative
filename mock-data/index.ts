@@ -9,8 +9,8 @@ export const data: any = [
   {
     id: 2,
     image:
-      "https://cdn.atomix.vg/wp-content/uploads/2019/03/AttackOnTita_S3P2_Arte.jpg",
-    title: "Attack on Titan",
+      "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725373/mashle-magic-and-muscles-vol-4-9781974725373_hr.jpg",
+    title: "MASHLE: MAGIC AND MUSCLES",
     subTitle: "Dub | Sub",
   },
   {

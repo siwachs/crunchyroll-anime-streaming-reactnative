@@ -8,16 +8,20 @@ import {
 const Touchable = ({
   children,
   onPress,
+  hitSlop,
 }: {
   children: ReactNode;
   onPress?: () => void;
+  hitSlop?: { top?: number; bottom?: number; left?: number; right?: number };
 }) => {
   return Platform.OS === "android" ? (
-    <TouchableNativeFeedback onPress={onPress}>
+    <TouchableNativeFeedback hitSlop={hitSlop} onPress={onPress}>
       {children}
     </TouchableNativeFeedback>
   ) : (
-    <TouchableOpacity onPress={onPress}>{children}</TouchableOpacity>
+    <TouchableOpacity hitSlop={hitSlop} onPress={onPress}>
+      {children}
+    </TouchableOpacity>
   );
 };
 
